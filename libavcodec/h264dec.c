@@ -639,6 +639,7 @@ static void flush_dpb(AVCodecContext *avctx)
     int i;
 
     memset(h->delayed_pic, 0, sizeof(h->delayed_pic));
+    h->got_first_iframe = 0;
 
     ff_h264_flush_change(h);
 
